@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table Data</title>
+    <link rel="stylesheet" href="/static/styles.css">
+    <script src="/static/script.js"></script>
+</head>
+
+<body>
+    <h1 style="text-align: center;">Table Data: {{ table_name }}</h1>
+    <form action="/{{ table_name }}/add" method="post">
+        {{ table_form }}
+        <button type="submit">Add Data</button>
+    </form>
+    <table>
+        <thead>
+            <tr>
+                {{ table_columns }}
+            </tr>
+        </thead>
+        <tbody>
+            {{ table_data }}
+        </tbody>
+    </table>
+</body>
+
+</html>
