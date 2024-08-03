@@ -22,9 +22,9 @@ def handle_query_table(handler, params):
             f'<tr data-id="{row[0]}">'
             f'{"".join(f"<td><span>{row[i]}</span><input type=\'text\' name=\'{col}\' value=\'{
                        row[i]}\' style=\'display:none;\'></td>" for i, col in enumerate(column_names))}'
-            f'<td><button class="edit-btn">Edit</button><button class="save-btn" style="display:none;">Save</button></td>'
-            f'<td><a href="/{params["table_name"]
-                             }/delete?id={row[0]}">Delete</a></td>'
+            f'<td><button class="edit-btn">Edit</button><button class="save-btn" style="display:none;">Save</button>'
+            f'<a href="/{params["table_name"]
+                         }/delete?id={row[0]}">Delete</a></td>'
             f'</tr>'
             for row in res
         ),
